@@ -1,0 +1,1 @@
+This is the collection of code for my COMP0002 Principles of Programming module.
