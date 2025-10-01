@@ -7,7 +7,7 @@ int main(int argc, [[maybe_unused]] char* argv[argc+1])
     double A[5] = {
         [0] = 9.0,
         [1] = 2.9,
-        [4] = 3.E+25,
+        [4] = 3.E+200, // infinity when squared
         [3] = .00007
     };
 
