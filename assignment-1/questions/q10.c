@@ -6,16 +6,26 @@
 int main(void)
 {
     // flower
-    drawArc(80, 100, 30, 30, 0, 360); //flower centre
     setColour(blue);
-    drawOval(30, 100, 50, 30);
+    fillArc(35, 95, 60, 40, 0, 360); //left
     setColour(orange);
-    drawOval(110, 100, 50, 30);
+    fillArc(105, 95, 60, 40, 0, 360); //right
     setColour(pink);
-    drawOval(80, 50, 30, 50);
+    fillArc(80, 45, 40, 60, 0, 360); // top
     setColour(magenta);
-    drawOval(80, 130, 30, 50);
+    fillArc(80, 125, 40, 60, 0, 360); //bottom
     setColour(green);
-    drawArc(75, 130, 50, 300, 0, 90);
+    drawArc(60, 120, 75, 300, 0, 75); // stem
+    setColour(black);
+    fillArc(85, 100, 30, 30, 0, 360); //flower centre
+
+    //poppy
+    setColour(red);
+    fillArc(230, 100, 70, 120, 0, 360); // left 
+    fillArc(270, 100, 70, 120, 0, 360); //right
+    setColour(black);
+    fillArc(260, 135, 50, 50, 0, 360); // flower centre
+    setColour(green);
+    drawLine(285, 210, 285, 275); // stem
     return 0;
 }
