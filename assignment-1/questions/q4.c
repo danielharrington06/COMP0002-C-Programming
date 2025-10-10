@@ -5,7 +5,7 @@
 
 int main(void)
 {
-    // defome Point for use of storing octagon points
+    // defome Point for use of storing heptagon points
     typedef struct {
         double x;
         double y;
