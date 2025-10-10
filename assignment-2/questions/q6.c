@@ -2,9 +2,11 @@
 // This program displays a right arrow pattern
 
 #include <stdio.h>
+
 int min(int a, int b) {
     return (a < b) ? a : b;
 }
+
 int main(void)
 {
     for(int i = 0; i < 9; i++) {
