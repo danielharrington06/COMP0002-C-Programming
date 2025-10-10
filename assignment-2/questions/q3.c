@@ -10,4 +10,5 @@ int main(void)
         i++;
         printf("%d * 13 = %d\n", i, i*13);
     } while (i < 13);
+    return 0;
 }
