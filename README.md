@@ -22,8 +22,7 @@ Most of the files here were written for coursework tasks, personal experiments, 
 |----------------|-------------|
 | `assignments/` | Coursework-related exercises for COMP0002 |
 | `practice/` | Small test programs written for learning or debugging |
-| `notes/` | Any C snippets, experiments, or examples for self-study |
-| `LICENSE` | Custom "All Rights Reserved" license (see below) |
+| `LICENSE` | Custom "All Rights Reserved" license |
 
 *(Structure may change as the module progresses.)*
 
