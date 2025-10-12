@@ -1,4 +1,4 @@
-# COMP0002 – C Programming Practice and Experiments
+# COMP0002 – C Programming
 
 This repository contains my C programming work for the first half of the **COMP0002** module at **UCL**.  
 It includes a mix of assignment code, practice exercises, and general experimentation as I learn the language and test different ideas.
