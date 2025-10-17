@@ -30,5 +30,6 @@ int main(void)
 
     printf("The Perimeter is %lf\n", perimeter);
     printf("The Area is %lf\n", area);
-
+    
+    return 0;
 }
