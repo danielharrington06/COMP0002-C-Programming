@@ -143,7 +143,6 @@ void VerbaliseNumber(int num) {
         TwentyToNinetyNine(num);
     }
     // anything above 100 can be dealt with first with 100s then mod 100
-
     else {
         Hundreds(num);
     }
