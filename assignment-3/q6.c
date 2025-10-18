@@ -11,6 +11,7 @@ bool IsDivisible(int a, int b) {
 
 int main(void)
 {
+    printf("This program determines whether a number is prime\n");
     long int num = 0;
     bool prime = true;
     printf("Enter a number: ");
