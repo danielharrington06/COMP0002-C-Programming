@@ -98,19 +98,24 @@ void DealWithCollisionHorzWall(double *Vx, double *Vy) {
 }
 
 void CheckCollisions(double *x, double *y, double *Vx, double *Vy) {
-    if (*x <= BALL_RAD ) { // vertical wall hit
+    // in each case, if its a hit, deal with the collision then reset the ball to avoid glitching
+
+    if (*x <= BALL_RAD ) { // left wall hit
         DealWithCollisionVertWall(Vx, Vy);
         *x = BALL_RAD + 1;
     }
-    else if (*x >= WINDOW_SIZE - BALL_RAD) {
+    else if (*x >= WINDOW_SIZE - BALL_RAD) { // right wall hit
         DealWithCollisionVertWall(Vx, Vy);
         *x = WINDOW_SIZE - BALL_RAD - 1;
     }
-    if (*y <= BALL_RAD) {
+
+    // needs to be another if to account for a hit in the corner
+
+    if (*y <= BALL_RAD) { // top wall hit
         DealWithCollisionHorzWall(Vx, Vy);
         *y = BALL_RAD + 1;
     }
-    else if (*y >= WINDOW_SIZE - BALL_RAD) {
+    else if (*y >= WINDOW_SIZE - BALL_RAD) { // bottom wall hit
         DealWithCollisionHorzWall(Vx, Vy);
         *y = WINDOW_SIZE - BALL_RAD - 1;
     }
