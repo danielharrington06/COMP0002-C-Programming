@@ -1,7 +1,6 @@
 /* Written by Daniel Harrington
 This program contains a function to create a return a pointer to a ragged 2d array
 a ragged 2d array 2d array has rows of different lengths
-Extension: use this to create pascals triangle
 */
 
 #include <malloc.h>
@@ -45,57 +44,16 @@ void free_ragged_array(int** ragged2DArray, int numRow, int* rowLengths) {
     free(ragged2DArray);
 }
 
-int** create_pascal_triangle(int numRows) {
-
-    if (numRows <= 0) return NULL;
-
-    int rowLengths[numRows];
-    for (int i = 0; i < numRows; i++) {
-        rowLengths[i] = i+1;
-    }
-
-    int** pascalTriangle = create_ragged_2Darray(numRows, rowLengths);
-    if (pascalTriangle == NULL) {
-        printf("Memory allocation failed when making pascal triangle\n");
-        return NULL;
-    }
-
-    for (int i = 0; i < numRows; i++) {
-        for (int j = 0; j < rowLengths[i]; j++) {
-            if (j == 0 || j == rowLengths[i]-1) {
-                // start of end value - set to 1
-                pascalTriangle[i][j] = 1;
-            }
-            else {
-                // else set as sum of above two
-                pascalTriangle[i][j] = pascalTriangle[i-1][j-1] + pascalTriangle[i-1][j];
-            }
-        }
-    }
-    return pascalTriangle;
-}
-
-void output_pascal_triangle(int** pascalTriangle, int numRow) {
-    for (int i = 0; i < numRow; i++) {
-        for (int j = 0; j < i+1; j++) {
-            printf("%d ", pascalTriangle[i][j]);
-        }
-        printf("\n");
-    }
-}
-
 int main(void)
-{   
-    int num = 0;
-    printf("To which Pascal Triangle row would you like to go to: ");
-    scanf("%d", &num);
-    num++; // pascal triangle starts counting on 0th row
-
-    int** pascalTriangle = create_pascal_triangle(num);
-    if (pascalTriangle == NULL) return 1;
+{
+    int rowLengths[] = {3, 4, 5};
+    int length = 3;
     
-    output_pascal_triangle(pascalTriangle, num);
-    free(pascalTriangle);
+    int** ragged2DArray = create_ragged_2Darray(length, rowLengths);
+    if (ragged2DArray == NULL) return 1;
 
+    free(ragged2DArray);
+
+    printf("Ragged 2D Array created and freed without error.\n");
     return 0;
 }
