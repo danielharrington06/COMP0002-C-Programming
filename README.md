@@ -5,30 +5,17 @@ It includes a mix of assignment code, practice exercises, and general experiment
 
 ---
 
-## 🧠 About
-The goal of this repository is to document my progress with C programming — covering core concepts like:
+## About
+This repository holds my C programming code — covering core concepts like:
 - Pointers and memory management  
 - Arrays, strings, and structs  
 - File I/O and error handling  
 - Recursion and modular program design  
 - Compilation and debugging with `gcc` / `gdb`
 
-Most of the files here were written for coursework tasks, personal experiments, or quick tests while learning.
-
 ---
 
-## 🧩 Repository Structure
-| Folder / File | Description |
-|----------------|-------------|
-| `assignments/` | Coursework-related exercises for COMP0002 |
-| `practice/` | Small test programs written for learning or debugging |
-| `LICENSE` | Custom "All Rights Reserved" license |
-
-*(Structure may change as the module progresses.)*
-
----
-
-## ⚙️ How to Compile
+## How to Compile
 Most files can be compiled from the terminal using `gcc`:
 ```bash
 gcc filename.c -o filename
